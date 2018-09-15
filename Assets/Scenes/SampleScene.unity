@@ -241,9 +241,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2229f09af6bcf184c837d308beae5f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 114806697781649134, guid: a6ad14072f15c434ca0f7b7f144dadbd, type: 2}
+  bullet: {fileID: 114806697781649134, guid: 9007632282df9a44c8434d67f0a3be98, type: 2}
   bullets: []
-  fireRate: 1.5
+  fireRate: 0.75
   gplayer: 0
 --- !u!1 &519420028
 GameObject:
@@ -495,7 +495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 114806697781649134, guid: a6ad14072f15c434ca0f7b7f144dadbd, type: 2}
   bullets: []
-  fireRate: 1.5
+  fireRate: 0.75
   gplayer: 1
 --- !u!1 &2087008884
 GameObject:
