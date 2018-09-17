@@ -34,7 +34,7 @@ public class Bullet : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.name == "Bullet(Clone)")
+        if (coll.gameObject.name == "Bullet(Clone)" && coll.gameObject.transform.GetComponent<Bullet>().gplayer != gplayer)
         {
             Destroy(gameObject);
         }
