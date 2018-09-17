@@ -8,11 +8,12 @@ public class Cannon : MonoBehaviour {
     public List<Bullet> bullets;
     public float fireRate;
     private float lastShot = 0.0f;
-    public bool gplayer;
+    bool gplayer;
 
     // Use this for initialization
     void Start () {
         bullets = new List<Bullet>();
+        gplayer = gameObject.transform.parent.GetComponent<PlayerController>().gplayer;
     }
 	
 	// Update is called once per frame
