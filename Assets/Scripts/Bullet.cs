@@ -41,7 +41,6 @@ public class Bullet : MonoBehaviour {
         //if ((coll.gameObject.name == "bPlayer" && !gplayer) || (coll.gameObject.name == "bPlayer" && gplayer))
         if (coll.gameObject.name == "bPlayer")
         {
-            Debug.Log("hit");
             //coll.gameObject.GetComponent<SpriteRenderer>().sprite = ;
         }
     }

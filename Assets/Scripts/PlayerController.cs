@@ -8,18 +8,28 @@ public class PlayerController : MonoBehaviour {
     int xind;
     int yind;
     public bool gplayer;
+    GameObject gScore;
+    GameObject bScore;
+    int gscore;
+    int bscore;
+
 	// Use this for initialization
 	void Start () {
+        gscore = 0;
+        bscore = 0;
         if (gplayer)
         {
             ggrid = GameObject.Find("Platform").GetComponent<TileGenerator>().ggrid;
             xind = 0;
             yind = 0;
+            bScore = GameObject.Find("bScore");
         } else
         {
             bgrid = GameObject.Find("Platform").GetComponent<TileGenerator>().bgrid;
             xind = 2;
             yind = 2;
+            gScore = GameObject.Find("gScore");
+            
         }
 	}
 	
@@ -72,7 +82,16 @@ public class PlayerController : MonoBehaviour {
     {
         if (coll.gameObject.name == "Bullet(Clone)" && coll.gameObject.transform.GetComponent<Bullet>().gplayer != gplayer)
         {
-            this.GetComponent<SpriteRenderer>().color = Color.black;
+            //this.GetComponent<SpriteRenderer>().color = Color.black;
+            if (gplayer)
+            {
+                bscore += 1;
+                bScore.GetComponent<TextMesh>().text = "Score: " + bscore.ToString();
+            } else
+            {
+                gscore += 1;
+                gScore.GetComponent<TextMesh>().text = "Score: " + gscore.ToString();
+            }
             Destroy(coll.gameObject);
         }
     }
